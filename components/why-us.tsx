@@ -38,41 +38,63 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   }, [inView, value])
 
   return (
-    <span ref={ref} className="font-serif text-5xl font-semibold text-foreground md:text-6xl">
+    <span ref={ref} className="font-serif text-5xl font-semibold md:text-6xl" style={{ color: "#1F1D1A" }}>
       {count}
-      <span className="text-gold">{suffix}</span>
+      <span style={{ color: "#78756F" }}>{suffix}</span>
     </span>
   )
 }
 
 export function WhyUs() {
   return (
-    <section className="mt-28 px-5 md:mt-36 md:px-8">
-      <div className="mx-auto max-w-6xl">
+    <section
+      className="py-24 md:py-36"
+      style={{ backgroundColor: "#F5F1EB" }}
+    >
+      <div className="mx-auto max-w-6xl px-5 md:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-medium uppercase tracking-widest text-gold">
+          <p
+            className="text-sm font-medium uppercase"
+            style={{ letterSpacing: "0.2em", color: "#78756F" }}
+          >
             Why LawyersRepo
           </p>
-          <h2 className="mt-4 text-balance font-serif text-3xl font-semibold leading-tight text-foreground md:text-5xl">
+          <h2
+            className="mt-4 text-balance font-serif text-3xl font-semibold leading-tight md:text-5xl"
+            style={{ color: "#1F1D1A" }}
+          >
             Work faster, smarter, and more confidently
           </h2>
         </Reveal>
 
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
+        <div className="mt-16 grid gap-6 md:grid-cols-3">
           {reasons.map((r, i) => (
             <Reveal key={r.title} delay={i * 0.08}>
               <motion.div
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="h-full rounded-2xl border border-border bg-card p-7"
+                className="group h-full rounded-2xl border p-8 transition-all hover:shadow-lg"
+                style={{
+                  borderColor: "#D4CFC7",
+                  backgroundColor: "white",
+                }}
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/15 text-gold">
+                <span
+                  className="flex h-12 w-12 items-center justify-center rounded-xl"
+                  style={{ backgroundColor: "#1F1D1A", color: "#F5F1EB" }}
+                >
                   <r.icon className="h-5 w-5" />
                 </span>
-                <h3 className="mt-5 font-serif text-xl font-semibold text-foreground">
+                <h3
+                  className="mt-6 font-serif text-xl font-semibold"
+                  style={{ color: "#1F1D1A" }}
+                >
                   {r.title}
                 </h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">
+                <p
+                  className="mt-3 text-sm leading-relaxed"
+                  style={{ color: "#78756F" }}
+                >
                   {r.desc}
                 </p>
               </motion.div>
@@ -80,12 +102,15 @@ export function WhyUs() {
           ))}
         </div>
 
-        <Reveal className="mt-6">
-          <div className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-3">
+        <Reveal className="mt-8">
+          <div
+            className="grid gap-px overflow-hidden rounded-2xl sm:grid-cols-3"
+            style={{ border: "1px solid #D4CFC7", backgroundColor: "#D4CFC7" }}
+          >
             {stats.map((s) => (
-              <div key={s.label} className="bg-card px-6 py-10 text-center">
+              <div key={s.label} className="px-6 py-12 text-center" style={{ backgroundColor: "white" }}>
                 <Counter value={s.value} suffix={s.suffix} />
-                <p className="mt-3 text-sm text-muted-foreground">{s.label}</p>
+                <p className="mt-3 text-sm" style={{ color: "#78756F" }}>{s.label}</p>
               </div>
             ))}
           </div>

@@ -46,32 +46,55 @@ const features = [
 
 export function Features() {
   return (
-    <section id="features" className="mt-28 scroll-mt-20 px-5 md:mt-36 md:px-8">
-      <div className="mx-auto max-w-6xl">
+    <section
+      id="features"
+      className="scroll-mt-20 py-24 md:py-36"
+      style={{ backgroundColor: "#F5F1EB" }}
+    >
+      <div className="mx-auto max-w-6xl px-5 md:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-medium uppercase tracking-widest text-gold">
+          <p
+            className="text-sm font-medium uppercase"
+            style={{ letterSpacing: "0.2em", color: "#78756F" }}
+          >
             Capabilities
           </p>
-          <h2 className="mt-4 text-balance font-serif text-3xl font-semibold leading-tight text-foreground md:text-5xl">
+          <h2
+            className="mt-4 text-balance font-serif text-3xl font-semibold leading-tight md:text-5xl"
+            style={{ color: "#1F1D1A" }}
+          >
             Everything a modern legal team needs
           </h2>
         </Reveal>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((f, i) => (
             <Reveal key={f.title} delay={i * 0.06}>
               <motion.div
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="group h-full rounded-2xl border border-border bg-card p-7 transition-colors hover:border-gold/50"
+                className="group h-full rounded-2xl border p-8 transition-all hover:shadow-lg"
+                style={{
+                  borderColor: "#D4CFC7",
+                  backgroundColor: "white",
+                }}
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary text-gold transition-colors group-hover:bg-gold group-hover:text-gold-foreground">
+                <span
+                  className="flex h-12 w-12 items-center justify-center rounded-xl"
+                  style={{ backgroundColor: "#1F1D1A", color: "#F5F1EB" }}
+                >
                   <f.icon className="h-5 w-5" />
                 </span>
-                <h3 className="mt-5 font-serif text-xl font-semibold text-foreground">
+                <h3
+                  className="mt-6 font-serif text-xl font-semibold"
+                  style={{ color: "#1F1D1A" }}
+                >
                   {f.title}
                 </h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">
+                <p
+                  className="mt-3 text-sm leading-relaxed"
+                  style={{ color: "#78756F" }}
+                >
                   {f.desc}
                 </p>
               </motion.div>

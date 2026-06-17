@@ -1,6 +1,5 @@
 import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
-import { WaitlistBanner } from "@/components/waitlist-banner"
 import { Features } from "@/components/features"
 import { Vision } from "@/components/vision"
 import { WhyUs } from "@/components/why-us"
@@ -11,10 +10,9 @@ import { SiteFooter } from "@/components/site-footer"
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen">
       <SiteHeader />
       <Hero />
-      <WaitlistBanner />
       <Features />
       <Vision />
       <WhyUs />

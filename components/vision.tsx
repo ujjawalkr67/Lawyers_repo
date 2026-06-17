@@ -12,11 +12,18 @@ const phases = [
 
 export function Vision() {
   return (
-    <section id="vision" className="mt-28 scroll-mt-20 px-5 md:mt-36 md:px-8">
-      <div className="mx-auto max-w-6xl">
+    <section
+      id="vision"
+      className="scroll-mt-20 py-24 md:py-36"
+      style={{ backgroundColor: "#1F1D1A" }}
+    >
+      <div className="mx-auto max-w-6xl px-5 md:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
-            <div className="relative overflow-hidden rounded-3xl border border-border">
+            <div
+              className="relative overflow-hidden rounded-2xl"
+              style={{ border: "1px solid rgba(255,255,255,0.06)" }}
+            >
               <Image
                 src="/images/vision-detail.png"
                 alt="Law book and scale of justice"
@@ -24,18 +31,33 @@ export function Vision() {
                 height={780}
                 className="h-full w-full object-cover"
               />
+              <div
+                className="absolute inset-0"
+                style={{
+                  background: "linear-gradient(to top, rgba(31,29,26,0.3), transparent)",
+                }}
+              />
             </div>
           </Reveal>
 
           <div>
             <Reveal>
-              <p className="text-sm font-medium uppercase tracking-widest text-gold">
+              <p
+                className="text-sm font-medium uppercase"
+                style={{ letterSpacing: "0.2em", color: "#78756F" }}
+              >
                 Product Vision
               </p>
-              <h2 className="mt-4 text-balance font-serif text-3xl font-semibold leading-tight text-foreground md:text-5xl">
+              <h2
+                className="mt-4 text-balance font-serif text-3xl font-semibold leading-tight md:text-5xl"
+                style={{ color: "#F5F1EB" }}
+              >
                 Built for the future of legal work
               </h2>
-              <p className="mt-5 text-pretty text-base leading-relaxed text-muted-foreground">
+              <p
+                className="mt-5 text-pretty text-base leading-relaxed"
+                style={{ color: "#A8A29E" }}
+              >
                 LawyersRepo combines legal expertise with advanced artificial
                 intelligence to create a unified platform for legal operations,
                 compliance, research, and litigation intelligence.
@@ -47,21 +69,40 @@ export function Vision() {
                 <Reveal key={p.phase} delay={i * 0.08}>
                   <div className="relative flex gap-5 pb-8 last:pb-0">
                     <div className="flex flex-col items-center">
-                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-gold/40 bg-gold/10 text-xs font-semibold text-gold">
+                      <span
+                        className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-xs font-semibold"
+                        style={{
+                          border: "1px solid rgba(168,162,158,0.3)",
+                          backgroundColor: "rgba(168,162,158,0.1)",
+                          color: "#D4CFC7",
+                        }}
+                      >
                         {i + 1}
                       </span>
                       {i < phases.length - 1 && (
-                        <span className="mt-1 w-px flex-1 bg-border" />
+                        <span
+                          className="mt-1 w-px flex-1"
+                          style={{ backgroundColor: "rgba(255,255,255,0.08)" }}
+                        />
                       )}
                     </div>
                     <div className="pb-1">
-                      <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                      <p
+                        className="text-xs font-medium uppercase"
+                        style={{ letterSpacing: "0.15em", color: "#78756F" }}
+                      >
                         {p.phase}
                       </p>
-                      <h3 className="mt-1 font-serif text-lg font-semibold text-foreground">
+                      <h3
+                        className="mt-1 font-serif text-lg font-semibold"
+                        style={{ color: "#F5F1EB" }}
+                      >
                         {p.title}
                       </h3>
-                      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                      <p
+                        className="mt-1 text-sm leading-relaxed"
+                        style={{ color: "#A8A29E" }}
+                      >
                         {p.desc}
                       </p>
                     </div>

@@ -9,13 +9,19 @@ const links = [
 
 export function SiteFooter() {
   return (
-    <footer className="mt-28 border-t border-border px-5 py-12 md:mt-36 md:px-8">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 md:flex-row">
-        <a href="#top" className="flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground">
+    <footer style={{ backgroundColor: "#1F1D1A", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 px-5 py-14 md:flex-row md:px-8">
+        <a href="#top" className="flex items-center gap-2.5">
+          <span
+            className="flex h-8 w-8 items-center justify-center rounded-md"
+            style={{ backgroundColor: "#F5F1EB", color: "#1F1D1A" }}
+          >
             <Scale className="h-4 w-4" aria-hidden="true" />
           </span>
-          <span className="font-serif text-lg font-semibold tracking-tight text-foreground">
+          <span
+            className="font-serif text-lg font-semibold tracking-tight"
+            style={{ color: "#F5F1EB" }}
+          >
             LawyersRepo
           </span>
         </a>
@@ -25,14 +31,15 @@ export function SiteFooter() {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="text-sm transition-colors hover:opacity-80"
+              style={{ color: "#78756F" }}
             >
               {l.label}
             </a>
           ))}
         </nav>
 
-        <p className="text-sm text-muted-foreground">
+        <p className="text-sm" style={{ color: "#78756F" }}>
           © 2026 LawyersRepo. All rights reserved.
         </p>
       </div>

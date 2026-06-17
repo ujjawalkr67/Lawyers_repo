@@ -15,9 +15,9 @@ const fraunces = Fraunces({
 })
 
 export const metadata: Metadata = {
-  title: 'LawyersRepo — The AI Operating System for Modern Legal Practice',
+  title: 'LawyersRepo — Professional Class AI for Legal Practice',
   description:
-    'AI-powered legal intelligence, document automation, compliance workflows, case research, and court analytics — built for the next generation of lawyers, law firms, and legal teams.',
+    'LawyersRepo is AI designed for legal and professional services. Advance your expertise on a secure platform that lets you focus on high-value work.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#f4f0e8',
+  themeColor: '#1F1D1A',
 }
 
 export default function RootLayout({
